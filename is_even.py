@@ -19,5 +19,10 @@ if __name__=='__main__':
     value = 10 ** 1000 + 1
     number_of_measurements = 10 ** 6
 
+    print('Время выполнения алгоритма "&":')
     print(timeit.timeit(f'is_even({value})', number=number_of_measurements, setup='from __main__ import is_even'))
+
+    print('-' * 100)
+
+    print('Время выполнения алгоритма, описанного в задаче:')
     print(timeit.timeit(f'isEven({value})', number=number_of_measurements, setup='from __main__ import isEven'))
